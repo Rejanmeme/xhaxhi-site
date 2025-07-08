@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitglieder – Xaxhi Industry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="Bilder/Logo.jpeg" alt="Xaxhi Industry Logo" class="logo" />
+    <span class="mobil-titel">Xaxhi Industry</span>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation für Desktop -->
+<nav class="desktop-nav">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="mitglieder.html">Mitglieder</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- Vollbildmenü für Mobile -->
+<nav id="fullscreen-nav">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="mitglieder.html">Mitglieder</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <section class="mitglieder">
+      <h2>Die Xaxhi-Crew</h2>
+      <ul class="mitgliederliste">
+        <li onclick="zeigeMitglied(0)">Rejan „Rojo“ Memeti</li>
+        <li onclick="zeigeMitglied(1)">Ahmed „Xhaxh“ Shabani</li>
+        <li onclick="zeigeMitglied(2)">Amar „Daja“ Sulajmani</li>
+        <li onclick="zeigeMitglied(3)">Ijad „Pablo“ Jusufi</li>
+        <li onclick="zeigeMitglied(5)">Ermal „Mali“ Ademi</li>
+        <li onclick="zeigeMitglied(7)">Sherif „Shero“ Imeri</li>
+        <li onclick="zeigeMitglied(10)">Sertan „Abi“ Serpek</li>
+      </ul>
+
+      <div class="mitglied-anzeige" id="mitglied-anzeige">
+        <img src="Bilder/platzhalter-mensch.jpg" alt="Mitglied" id="mitglied-bild">
+        <div class="mitglied-info" id="mitglied-text">
+          <h3>Name erscheint hier</h3>
+          <p>Text erscheint hier. Klicke auf einen Namen links.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Xaxhi Industry – Alle Rechte vorbehalten</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

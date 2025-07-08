@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – Xaxhi Industry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img src="Bilder/Logo.jpeg" alt="Xaxhi Industry Logo" class="logo" />
+    <span class="mobil-titel">Xaxhi Industry</span>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation für Desktop -->
+<nav class="desktop-nav">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="mitglieder.html">Mitglieder</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- Vollbildmenü für Mobile -->
+<nav id="fullscreen-nav">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="mitglieder.html">Mitglieder</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+</header>
+
+  <main>
+    <section class="hero">
+      <h1>Kontakt</h1>
+      <p>Schreib etwas falls du ein Problem mit der Xhaxhi Industry hast. Antworten werden wir nicht.</p>
+    </section>
+
+    <section class="kontakt">
+      <h2>Schreib uns eine Nachricht</h2>
+      <form action="#" method="POST" class="kontaktformular">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Dein Name" required />
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="dein@email.com" required />
+
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" placeholder="Was liegt dir auf dem Herzen, Bruder?" rows="5" required></textarea>
+
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Xaxhi Industry – Alle Rechte vorbehalten</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
