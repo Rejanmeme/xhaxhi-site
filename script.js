@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Ahmed „Xhaxh“ Shabani",
       bild: "Bilder/ahmed2.jpg",
       text: "1.90 Albaner joggt rückwärts nach Frauenfeld, schreit dabei ‚Messi ist mein Vater!‘ und verkauft dabei imaginäre Döner. Sein linker Schuh spielt besser Fußball als du – und der hat nicht mal Schnürsenkel"
-
     },
     {
       name: "Amar „Daja“ Sulajmani",
@@ -79,4 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>${mitglied.text}</p>
     `;
   };
-});
+ }
+);
+
+
