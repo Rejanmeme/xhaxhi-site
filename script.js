@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Sertan „Abi“ Serpek",
-      bild: "Bilder/knie.jpg",
+      bild: "Bilder/abi-kante.jpeg",
       text: "Ist da, redet wenig, trifft immer. In Fifa und im Leben. Man vermutet das er auch Knieprobleme wegen seiner unglaublichen Spielerkarriere hat."
     }
   ];
