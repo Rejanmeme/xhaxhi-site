@@ -498,3 +498,29 @@ footer {
   border-radius: 4px;
 }
 
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.video-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.video-card p {
+  font-weight: 600;
+}
+
+

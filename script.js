@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mitglieder = [
     {
       name: "Rejan „Rojo“ Memeti",
-      bild: "Bilder/Rejan.jpg",
+      bild: "Bilder/Rejan-kappe-2.png",
       text: "Still, ruhig, analytisch – bis er den Code sieht, der nicht läuft. Dann wird's persönlich. Zwischen Kabelsalat und Chaos: immer die stabilste Verbindung der Gruppe."
     },
     {
