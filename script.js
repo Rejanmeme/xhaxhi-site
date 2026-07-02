@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Zeigt ein Mitglied an (falls vorhanden)
-  window.zeigeMitglied = function(index) {
+  window.zeigeMitglied = function (index) {
     const mitglied = mitglieder[index];
     document.getElementById("mitglied-bild").src = mitglied.bild;
     document.getElementById("mitglied-bild").alt = mitglied.name;
@@ -195,7 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- }
+  const aktuellesJahr = new Date().getFullYear();
+  document.getElementById("jahr").textContent = aktuellesJahr;
+
+}
 );
 
 
