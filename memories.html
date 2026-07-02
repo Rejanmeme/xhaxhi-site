@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xhaxhi Industry – Memories</title>
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="Bilder/Xhaxhi-weiss.png" alt="Xhaxhi Industry Logo" class="logo" />
+    <span class="mobil-titel">Xhaxhi Industry</span>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="vlogs.html">Vlogs</a></li>
+      <li><a href="memories.html" class="active">Memories</a></li>
+      <li><a href="mitglieder.html">Mitglieder</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <nav id="fullscreen-nav">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="vlogs.html">Vlogs</a></li>
+      <li><a href="memories.html">Memories</a></li>
+      <li><a href="mitglieder.html">Mitglieder</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Memories</h1>
+    <p>Die besten Momente der Xhaxhi Industry – gesammelt an einem Ort.</p>
+  </section>
+
+  <section class="memories-section">
+    <h2>Best Of</h2>
+    <p>Unsere stärksten Bilder, lustigsten Momente und besten Erinnerungen.</p>
+
+    <div id="memories-grid" class="memories-grid"></div>
+
+    <div class="load-more-wrapper">
+      <button id="load-more-memories" class="load-more-btn">Mehr Bilder laden</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="memory-lightbox" class="memory-lightbox">
+  <span id="lightbox-close" class="lightbox-close">&times;</span>
+  <button id="lightbox-prev" class="lightbox-arrow lightbox-prev">&#10094;</button>
+  <img id="lightbox-img" src="" alt="Memory Bild">
+  <button id="lightbox-next" class="lightbox-arrow lightbox-next">&#10095;</button>
+</div>
+
+<footer>
+  <p>&copy; 2025 Xhaxhi Industry – Alle Rechte vorbehalten</p>
+</footer>
+
+<script src="script.js?v=10"></script>
+</body>
+</html>

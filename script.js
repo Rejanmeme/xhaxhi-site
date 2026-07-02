@@ -78,6 +78,123 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>${mitglied.text}</p>
     `;
   };
+
+  // Memories-Seite automatisch laden
+  const memoriesGrid = document.getElementById("memories-grid");
+  const loadMoreBtn = document.getElementById("load-more-memories");
+  const lightbox = document.getElementById("memory-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+  const lightboxPrev = document.getElementById("lightbox-prev");
+  const lightboxNext = document.getElementById("lightbox-next");
+
+  if (memoriesGrid) {
+    const totalImages = 56;
+    const imagesPerLoad = 9;
+    let loadedImages = 0;
+    let currentImageIndex = 0;
+
+    const memoryImages = [];
+
+    for (let i = 1; i <= totalImages; i++) {
+      const number = String(i).padStart(3, "0");
+      memoryImages.push(`Memories/best-of/best-of-${number}.jpeg`);
+    }
+
+    function loadImages() {
+      const nextImages = memoryImages.slice(loadedImages, loadedImages + imagesPerLoad);
+
+      nextImages.forEach((src, index) => {
+        const realIndex = loadedImages + index;
+
+        const card = document.createElement("div");
+        card.className = "memory-card";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `Xhaxhi Memory ${realIndex + 1}`;
+        img.loading = "lazy";
+
+        card.appendChild(img);
+        memoriesGrid.appendChild(card);
+
+        card.addEventListener("click", () => {
+          openLightbox(realIndex);
+        });
+      });
+
+      loadedImages += nextImages.length;
+
+      if (loadedImages >= memoryImages.length && loadMoreBtn) {
+        loadMoreBtn.style.display = "none";
+      }
+    }
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      lightboxImg.src = memoryImages[currentImageIndex];
+      lightbox.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % memoryImages.length;
+      lightboxImg.src = memoryImages[currentImageIndex];
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + memoryImages.length) % memoryImages.length;
+      lightboxImg.src = memoryImages[currentImageIndex];
+    }
+
+    loadImages();
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", loadImages);
+    }
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
+
+    if (lightboxNext) {
+      lightboxNext.addEventListener("click", showNextImage);
+    }
+
+    if (lightboxPrev) {
+      lightboxPrev.addEventListener("click", showPrevImage);
+    }
+
+    if (lightbox) {
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("show")) return;
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "ArrowRight") {
+        showNextImage();
+      }
+
+      if (event.key === "ArrowLeft") {
+        showPrevImage();
+      }
+    });
+  }
+
  }
 );
 

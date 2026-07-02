@@ -530,3 +530,162 @@ footer {
   letter-spacing: 0.5px;
 }
 
+/* =========================
+   MEMORIES PAGE
+   ========================= */
+
+.memories-section {
+  text-align: center;
+}
+
+
+.memories-section p {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* =========================
+   MEMORIES – Masonry Layout
+   ========================= */
+
+.memories-grid {
+  columns: 4 220px;
+  column-gap: 18px;
+  margin-top: 35px;
+}
+
+.memory-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 18px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  break-inside: avoid;
+}
+
+.memory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+.memory-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: unset;
+}
+
+/* Erstes Bild gross als Highlight */
+.memory-card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Einige Bilder etwas breiter für modernen Look */
+.memory-card:nth-child(4),
+.memory-card:nth-child(8),
+.memory-card:nth-child(13),
+.memory-card:nth-child(18) {
+  grid-column: span 2;
+}
+
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.load-more-btn {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #e63946;
+  transform: translateY(-2px);
+}
+
+/* Lightbox */
+.memory-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.memory-lightbox.show {
+  display: flex;
+}
+
+.memory-lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 42px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: none;
+  font-size: 42px;
+  padding: 16px 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .memories-grid {
+    columns: 2 150px;
+    column-gap: 12px;
+  }
+
+  .memory-card {
+    margin-bottom: 12px;
+    border-radius: 14px;
+  }
+}
+
+
